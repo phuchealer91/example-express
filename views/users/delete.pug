@@ -1,0 +1,15 @@
+extends ../layouts/common
+block content   
+  h1
+   span.mr-3 Remove Users
+  .d-flex.align-items-center
+  .container
+        ul.errors
+            if errors
+                each error, i in errors
+                    li.alert.alert-danger #{error.msg}
+     form(method='post', action='/users/delete/{{users._id}}', )
+            button.btn.btn-primary(type='submit') Yes Do It
+
+    
+

@@ -5,7 +5,7 @@ var adapter = new FileSync('db.json');
 var db = low(adapter);
 
 // tao name database
-db.defaults({users: []})
+db.defaults({users: [], products:[], sessions:[]})
   .write()
 
 module.exports = db;
