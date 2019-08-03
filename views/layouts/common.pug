@@ -20,11 +20,13 @@ html
           li.nav-item
            a(href="/users/create").nav-link Create 
           li.nav-item
+           a(href="/users").nav-link Users  
+          li.nav-item
            a(href="/products").nav-link Products  
           li.nav-item
            a(href="#").nav-link Cart 
           p= countCart
-      if user 
-        p= user.name
+        if user 
+          p.btn.btn-secondary= user.name
       .container.pt-5
         block content 
